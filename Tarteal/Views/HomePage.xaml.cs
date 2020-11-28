@@ -11,6 +11,7 @@ using Tarteal.Views.KawaterProgramme;
 using Tarteal.Views.MotaMalekPrograme;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace Tarteal.Views
 {
@@ -21,9 +22,21 @@ namespace Tarteal.Views
         public HomePage()
         {
             InitializeComponent();
+            var current = Connectivity.NetworkAccess;
+           
+            if (current == NetworkAccess.Internet)
+            {
+                
+            }
+            else
+            {
+              DisplayAlert("خطأ", "يرجي الاتصال بالانترنت للوصول الي المحتوي", "موافق");
+            }
+
+
         }
 
-        
+
 
         private void Azhur_Clicked(object sender, EventArgs e)
         {
@@ -43,6 +56,11 @@ namespace Tarteal.Views
         private void malek_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage.Navigation.PushAsync(new Mota());
+        }
+
+        private async void  tawasel_Clicked(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://m.me/MohamedHanafydev", BrowserLaunchMode.SystemPreferred);
         }
     }
 }

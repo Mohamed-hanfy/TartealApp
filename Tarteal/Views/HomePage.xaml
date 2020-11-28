@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarteal.Views.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarHasShadow="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="backg.png"
+             >
+    <ScrollView>
+        <StackLayout Margin="30,60,30,0" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="220" />
+                    <RowDefinition Height="250" />
+                    <RowDefinition Height="250" />
+                </Grid.RowDefinitions>
+
+                <Frame BackgroundColor="#D68910" Grid.Column="0" Grid.Row="0" CornerRadius="15" >
+                    <StackLayout>
+                        <Label Text="برنامج فكر" TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        <ImageButton 
+                            x:Name="Faker" Clicked="Faker_Clicked"
+                            Source="https://i1.sndcdn.com/artworks-000175917473-h7k9mi-t500x500.jpg" />
+                    </StackLayout>
+                </Frame>
+                
+                <Frame BackgroundColor="#D68910" Grid.Column="1" Grid.Row="0" CornerRadius="15" >
+                    <StackLayout>
+                        <Label Text="برنامج خواطر الشعراوي" TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        <ImageButton x:Name="Kawater" Clicked="Kawater_Clicked"
+                            Source="https://www.mogtahed.com/wp-content/uploads/2020/02/al-sharawy.jpg" />
+                    </StackLayout>
+                </Frame>
+                
+                <Frame BackgroundColor="#D68910" Grid.Column="0" Grid.Row="1" CornerRadius="15" >
+                    <StackLayout>
+                        <Label Text="الفقه المالكي" TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        <ImageButton x:Name="malek" Clicked="malek_Clicked"
+                            Source="https://upload.wikimedia.org/wikipedia/commons/a/a3/Mowata.jpg" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#D68910" Grid.Column="1" Grid.Row="1" CornerRadius="15" >
+                    <StackLayout>
+                        <Label Text="الفتاوي الشرعيه من الازهر الشريف" TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        <ImageButton x:Name="Azhur" Clicked="Azhur_Clicked"
+                            Source="https://www.azhar.eg/Portals/_default/Skins/Azhar/images/logo-splash-optimized.png" />
+
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

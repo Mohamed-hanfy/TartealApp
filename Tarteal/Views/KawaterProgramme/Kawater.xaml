@@ -12,7 +12,7 @@
             Margin="0,50,0,0" HorizontalOptions="Center"
             Text="تفسير القران للشيخ الشعراوي" FontSize="20" FontFamily="{StaticResource CairoA}" TextColor="Black"/>
         <Image Source="Line.png" HorizontalOptions="Center"/>
-        <ScrollView>
+      
             <StackLayout Margin="0,0,50,0">
 
                 <ListView x:Name="kawater" SelectionMode="Single" ItemSelected="Fakee_ItemSelected" >
@@ -25,6 +25,6 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-        </ScrollView>
+        
     </StackLayout>
 </ContentPage>

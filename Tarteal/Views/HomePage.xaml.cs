@@ -60,7 +60,7 @@ namespace Tarteal.Views
 
         private async void  tawasel_Clicked(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://m.me/MohamedHanafydev", BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync("https://m.me/tartealapp", BrowserLaunchMode.SystemPreferred);
         }
     }
 }

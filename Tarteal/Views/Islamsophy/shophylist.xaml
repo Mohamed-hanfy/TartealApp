@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarteal.Views.Islamsophy.shophylist"
+              NavigationPage.HasNavigationBar="False"
+             Shell.NavBarHasShadow="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="backg.png"
+             >
+    <StackLayout>
+        <Label
+            Margin="0,50,0,0" HorizontalOptions="Center"
+            Text="القارئ إسلام صبحي" FontSize="20" FontFamily="{StaticResource CairoA}" TextColor="Black"/>
+        <Image Source="Line.png" HorizontalOptions="Center"/>
+
+        <StackLayout Margin="0,0,50,0">
+
+            <ListView x:Name="IslamS" SelectionMode="Single" ItemSelected="IslamS_ItemSelected_1" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Name}" TextColor="White" FontSize="20"  FontFamily="{StaticResource CairoB}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

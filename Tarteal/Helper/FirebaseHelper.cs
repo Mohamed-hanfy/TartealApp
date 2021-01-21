@@ -24,10 +24,7 @@ namespace Tarteal.Helper
               {
                   Name = item.Object.Name,
                 URL = item.Object.URL,
-                 tafseer = item.Object.URL,
-                Text = item .Object.URL,
-                
-                  QarinName = item.Object.QarinName
+                                  
               }).ToList();
         }
         public async Task<List<Quran>> Kawaterr()
@@ -41,10 +38,8 @@ namespace Tarteal.Helper
               {
                   Name = item.Object.Name,
                   URL = item.Object.URL,
-                  tafseer = item.Object.URL,
-                  Text = item.Object.URL,
-
-                  QarinName = item.Object.QarinName
+                
+                 
               }).ToList();
         }
         public async Task<List<Quran>> motaa()
@@ -58,12 +53,35 @@ namespace Tarteal.Helper
               {
                   Name = item.Object.Name,
                   URL = item.Object.URL,
-                  tafseer = item.Object.URL,
-                  Text = item.Object.URL,
+                  
 
-                  QarinName = item.Object.QarinName
+         
               }).ToList();
         }
+        public async Task<List<Quran>> Islam()
+        {
+
+            return (await firebase
+              .Child("Q-IslamSopihe")
+              .OnceAsync<Quran>()).Select(item => new Quran
+              {
+                  Name = item.Object.Name,
+                  URL = item.Object.URL,
+              }).ToList();
+        }
+        public async Task<List<Quran>> Palohy()
+        {
+
+            return (await firebase
+              .Child("Q-Palohy")
+              .OnceAsync<Quran>()).Select(item => new Quran
+              {
+                  Name = item.Object.Name,
+                  URL = item.Object.URL,
+              }).ToList();
+        }
+
+
 
     }
 

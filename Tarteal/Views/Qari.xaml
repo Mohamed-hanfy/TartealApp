@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarteal.Views.Qari"
+              NavigationPage.HasNavigationBar="False"
+             Shell.NavBarHasShadow="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="backg.png"
+             >
+    <StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Never" >
+            <StackLayout Margin="30,60,30,0" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="220" />
+                        <RowDefinition Height="270" />
+                        <RowDefinition Height="250" />
+                    </Grid.RowDefinitions>
+                    
+                    <Frame BackgroundColor="#0000" Grid.Column="0" Grid.Row="0" CornerRadius="15" >
+                        <StackLayout>
+                            <ImageButton 
+                            x:Name="islamsophy" Clicked="islamsophy_Clicked"
+                            Source="https://i.le360.ma/ar/sites/default/files/styles/asset_image_full/public/assets/images/2019/08/40318807_1991431250920827_2235961593500270592_n.jpg" />
+                            <Label Text="القارئ إسلام صبحي" TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Frame BackgroundColor="#0000" Grid.Column="1" Grid.Row="0" CornerRadius="15" >
+                        <StackLayout>
+                            <ImageButton 
+                            x:Name="Hasah" Clicked="Hasah_Clicked"
+                            Source="https://yt3.ggpht.com/ytc/AAUvwniFfGwaTNikvDIQHNI1X5QBT5hVB8CY4NuNCCFBfA=s900-c-k-c0x00ffffff-no-rj" />
+                            <Label Text="القارئ هزاع البلوشي " TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        </StackLayout>
+                    </Frame>
+                   
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        <Frame Margin="0,0,0,0" Grid.ColumnSpan="3" Grid.Row="3" BackgroundColor="#0000"  >
+            <StackLayout>
+                <Label Text="تواصل معنا" TextColor="White" FontFamily="{StaticResource CairoA}" FontSize="17" HorizontalOptions="CenterAndExpand" />
+                <ImageButton HeightRequest="50" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                             Grid.Column="1" Grid.Row="4" Source="messenger.png" 
+                             BackgroundColor="#0000" x:Name="tawasel"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

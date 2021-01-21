@@ -65,12 +65,18 @@
 
 
     <TabBar>
-        <Tab Title="ترتيل"
-             Icon="reading_quran.png">
+        <Tab Title="برامج"
+             Icon="tvscreen.png">
+
             <ShellContent>
                 <local:HomePage/>
             </ShellContent>
         </Tab>
-        
+        <Tab Title="ترتيل"
+             Icon="quran.png">
+            <ShellContent>
+                <local:Qari/>
+            </ShellContent>
+        </Tab>
     </TabBar>
 </Shell>

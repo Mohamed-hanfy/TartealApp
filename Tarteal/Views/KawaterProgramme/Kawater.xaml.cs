@@ -28,7 +28,7 @@ namespace Tarteal.Views.KawaterProgramme
         private void Fakee_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var qaaa = e.SelectedItem as Quran;
-            App.Current.MainPage.Navigation.PushAsync(new KawaterMaster(qaaa));
+            App.Current.MainPage.Navigation.PushModalAsync(new KawaterMaster(qaaa));
         }
     }
 }

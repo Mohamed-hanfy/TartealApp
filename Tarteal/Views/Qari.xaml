@@ -24,7 +24,7 @@
                         <StackLayout>
                             <ImageButton 
                             x:Name="islamsophy" Clicked="islamsophy_Clicked"
-                            Source="https://i.le360.ma/ar/sites/default/files/styles/asset_image_full/public/assets/images/2019/08/40318807_1991431250920827_2235961593500270592_n.jpg" />
+                            Source="https://yt3.ggpht.com/ytc/AAUvwng3q89cFbL4GDpxVadCihPz-_2YBZHS9fPMZEst=s900-c-k-c0x00ffffff-no-rj" />
                             <Label Text="القارئ إسلام صبحي" TextColor="White" FontFamily="{StaticResource CairoB}" />
                         </StackLayout>
                     </Frame>
@@ -37,7 +37,15 @@
                             <Label Text="القارئ هزاع البلوشي " TextColor="White" FontFamily="{StaticResource CairoB}" />
                         </StackLayout>
                     </Frame>
-                   
+                    <Frame BackgroundColor="#0000" Grid.Column="0" Grid.Row="1" CornerRadius="15" >
+                        <StackLayout>
+                            <ImageButton 
+                            x:Name="maher" Clicked="maher_Clicked"
+                            Source="https://pbs.twimg.com/profile_images/468854550770622464/JvKKjCfc.png" />
+                            <Label Text="القارئ ماهر المعيقلي " TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        </StackLayout>
+                        
+                    </Frame>
                 </Grid>
             </StackLayout>
         </ScrollView>
@@ -45,8 +53,9 @@
             <StackLayout>
                 <Label Text="تواصل معنا" TextColor="White" FontFamily="{StaticResource CairoA}" FontSize="17" HorizontalOptions="CenterAndExpand" />
                 <ImageButton HeightRequest="50" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                             Grid.Column="1" Grid.Row="4" Source="messenger.png" 
-                             BackgroundColor="#0000" x:Name="tawasel"/>
+                             Grid.Column="1" Grid.Row="4" Source="messenger.png"
+                             Clicked="tawassl_Clicked"
+                             BackgroundColor="#0000" x:Name="tawassl"/>
             </StackLayout>
         </Frame>
     </StackLayout>

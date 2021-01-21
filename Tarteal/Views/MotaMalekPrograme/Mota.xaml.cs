@@ -28,7 +28,7 @@ namespace Tarteal.Views.MotaMalekPrograme
         private void mota_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var qaaaa = e.SelectedItem as Quran;
-            App.Current.MainPage.Navigation.PushAsync(new MoataaMaster(qaaaa));
+            App.Current.MainPage.Navigation.PushModalAsync(new MoataaMaster(qaaaa));
         }
     }
 }

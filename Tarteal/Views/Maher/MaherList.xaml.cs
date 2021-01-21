@@ -8,28 +8,29 @@ using Tarteal.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Tarteal.Views.FakerProgramme
+namespace Tarteal.Views.Maher
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Faker : ContentPage
+    public partial class MaherList : ContentPage
     {
         FirebaseHelper firebaseHelper = new FirebaseHelper();
-        public Faker()
+        public MaherList()
         {
             InitializeComponent();
         }
-
         protected async override void OnAppearing()
         {
 
             base.OnAppearing();
-            var allPersons = await firebaseHelper.Fakerr();
-            Fakeer.ItemsSource = allPersons;
+            var allPersons = await firebaseHelper.Maherel();
+
+            Maherelm.ItemsSource = allPersons;
         }
-        private void Fakeer_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        
+        private void Maherelm_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-           var qaa = e.SelectedItem as Quran;
-            App.Current.MainPage.Navigation.PushModalAsync(new FakerMaster(qaa));
+            var mah=e.SelectedItem as Quran;
+            App.Current.MainPage.Navigation.PushModalAsync(new MaherMaster(mah));
         }
     }
 }

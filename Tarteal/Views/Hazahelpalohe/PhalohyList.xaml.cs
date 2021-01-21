@@ -28,7 +28,7 @@ namespace Tarteal.Views.Hazahelpalohe
         private void Hasah_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var has = e.SelectedItem as Quran;
-            App.Current.MainPage.Navigation.PushAsync(new PaloshyMaster(has));
+            App.Current.MainPage.Navigation.PushModalAsync(new PaloshyMaster(has));
         }
     }
 }

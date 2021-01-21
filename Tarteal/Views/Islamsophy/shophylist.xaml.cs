@@ -28,7 +28,7 @@ namespace Tarteal.Views.Islamsophy
         private void IslamS_ItemSelected_1(object sender, SelectedItemChangedEventArgs e)
         {
             var islam = e.SelectedItem as Quran;
-            App.Current.MainPage.Navigation.PushAsync(new IslamMaster(islam));
+            App.Current.MainPage.Navigation.PushModalAsync(new IslamMaster(islam));
         }
     }
 }

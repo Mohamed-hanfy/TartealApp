@@ -82,7 +82,17 @@ namespace Tarteal.Helper
         }
 
 
+        public async Task<List<Quran>> Maherel()
+        {
 
+            return (await firebase
+              .Child("Q-Maher")
+              .OnceAsync<Quran>()).Select(item => new Quran
+              {
+                  Name = item.Object.Name,
+                  URL = item.Object.URL,
+              }).ToList();
+        }
     }
 
 

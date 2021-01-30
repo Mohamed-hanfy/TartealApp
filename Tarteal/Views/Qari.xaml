@@ -46,6 +46,15 @@
                         </StackLayout>
                         
                     </Frame>
+                    <Frame BackgroundColor="#0000" Grid.Column="1" Grid.Row="1" CornerRadius="15" >
+                        <StackLayout>
+                            <ImageButton 
+                            x:Name="hanyy" Clicked="hanyy_Clicked"
+                            Source="https://i.ibb.co/J2r47B8/1.jpg" />
+                            <Label Text="القارئ هاني السيد " TextColor="White" FontFamily="{StaticResource CairoB}" />
+                        </StackLayout>
+
+                    </Frame>
                 </Grid>
             </StackLayout>
         </ScrollView>

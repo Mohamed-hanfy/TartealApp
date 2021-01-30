@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
+             x:Class="Tarteal.Views.Hany.HanyMaster"
+                NavigationPage.HasNavigationBar="False"
+             Shell.NavBarHasShadow="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="backg.png"
+             >
+    <StackLayout>
+        <Label
+            Margin="0,50,0,0" HorizontalOptions="Center"
+            Text="{Binding Name}" FontSize="40" FontFamily="{StaticResource CairoA}" TextColor="Black"/>
+        <Image Source="Line.png" HorizontalOptions="Center"/>
+        <StackLayout Margin="30,40,30,0"  HeightRequest="1000" >
+            <shared:MediaPlayerElement x:Name="myVideo" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

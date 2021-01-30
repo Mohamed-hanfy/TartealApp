@@ -92,6 +92,19 @@ namespace Tarteal.Helper
                   Name = item.Object.Name,
                   URL = item.Object.URL,
               }).ToList();
+
+        }
+        public async Task<List<Quran>> Hanyel()
+        {
+
+            return (await firebase
+              .Child("Hany")
+              .OnceAsync<Quran>()).Select(item => new Quran
+              {
+                  Name = item.Object.Name,
+                  URL = item.Object.URL,
+              }).ToList();
+
         }
     }
 

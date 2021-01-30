@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tarteal.Views.Hany;
 using Tarteal.Views.Hazahelpalohe;
 using Tarteal.Views.Islamsophy;
 using Tarteal.Views.Maher;
@@ -26,7 +27,7 @@ namespace Tarteal.Views
             }
             else
             {
-                DisplayAlert("خطأ", "يرجي الاتصال بالانترنت للوصول الي المحتوي", "موافق");
+                DisplayAlert("خطأ", "يرجي الاتصال بالانترنت للوصول الي المحتوي باستمراركم سيغلق التطبيق تلقائياً", "موافق");
             }
 
         }
@@ -50,6 +51,10 @@ namespace Tarteal.Views
         {
             await Browser.OpenAsync("https://m.me/tartealapp", BrowserLaunchMode.SystemPreferred);
         }
-      
+
+        private void hanyy_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushAsync(new Hanyyy());
+        }
     }
 }
